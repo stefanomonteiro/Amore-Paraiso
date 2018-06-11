@@ -1,0 +1,92 @@
+.about {
+  &__header {
+    margin: 5rem 0rem;
+    padding-bottom: 0;
+
+    @include respond(tab-port) {
+      margin: 2rem 0;
+    }
+
+    &-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 5rem;
+      background: url(../../../images/floral_pattern.png);
+      perspective: 100rem;
+
+      &:hover .about__header-figure:first-child {
+        transform: rotateY(5deg);
+      }
+      &:hover .about__header-figure:last-child {
+        transform: rotateY(-5deg);
+      }
+
+      @include respond(phone) {
+        padding: 1rem;
+      }
+    }
+
+    &-figure {
+      min-width: 25rem;
+      max-width: 30rem;
+      border: $color-primary double 1rem;
+      box-shadow: 0 0 0.1rem 0.1rem $color-primary;
+      transform: rotateY(0);
+      transition: 0.5s;
+
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
+
+    &-text {
+      padding: 5rem;
+    }
+
+    &-p {
+      font-size: 3rem;
+      line-height: 5rem;
+      text-align: center;
+      font-family: $font-signature;
+      color: $color-gray-extra-light;
+
+      & big {
+        font-style: italic;
+      }
+    }
+
+    &-signature {
+      text-align: right;
+    }
+  }
+
+  &__body {
+    max-width: 90rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-p {
+      margin: 0 5rem 5rem;
+      column-count: 2;
+      column-gap: 10rem;
+
+      & span {
+        display: block;
+        margin-top: 1rem;
+      }
+      @include respond(tab-port) {
+        margin: 0 10rem 5rem;
+        column-gap: 8rem;
+      }
+      @include respond(big-phone) {
+        column-count: 1;
+      }
+      @include respond(small-phone) {
+        margin: 0 5rem;
+      }
+    }
+  }
+}

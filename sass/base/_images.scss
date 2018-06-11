@@ -1,0 +1,6 @@
+.blur {
+  filter: blur(2rem);
+  // &:not(.blur) > * {
+  //   filter: blur(2rem);
+  // }
+}

@@ -1,0 +1,37 @@
+//Colors
+
+$color-primary: #c39e9f;
+$color-primary-ultra-light: lighten($color-primary, 25%);
+$color-primary-extra-light: lighten($color-primary, 20%);
+$color-primary-light: lighten($color-primary, 10%);
+$color-primary-dark: darken($color-primary, 10%);
+$color-primary-extra-dark: darken($color-primary, 20%);
+
+$color-secondary: #c5c29f;
+$color-terciary: #83a081;
+
+$color-white: #fbfbfb;
+
+$color-black: #000;
+$color-gray-extra-dark: rgba(#000, 0.8);
+$color-gray-dark: rgba(#000, 0.7);
+$color-gray-medium: rgba(#000, 0.6);
+$color-gray-light: rgba(#000, 0.4);
+$color-gray-extra-light: rgba(#000, 0.3);
+$color-gray-ultra-light: rgba(#000, 0.1);
+$color-gray-extreme-light: rgba(#000, 0.05);
+
+// Fonts
+$font-logo: "Amatic SC", cursive;
+$font-signature: "Satisfy", cursive;
+$font-body: "Roboto", sans-serif;
+
+//Navbar
+$navbarTransition: all 0.3s ease-in-out;
+
+//Logo
+$logoWidth: 13rem;
+
+//Buttons
+$dist: 0.8rem; //Pseudo Element Distance
+$btnTransition: all 1s ease-in-out;

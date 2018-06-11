@@ -1,0 +1,7 @@
+.navbar--sticky {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 1px 10px 1px rgba($color: $color-primary, $alpha: 0.3);
+  animation: stickyNavbar 1s ease-out 0.2s both;
+}

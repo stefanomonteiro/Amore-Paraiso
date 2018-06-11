@@ -1,0 +1,111 @@
+.blog {
+  //   max-width: 120rem;
+  &__article {
+    padding: 2rem;
+    max-width: 80%;
+    margin: 2rem auto 4rem;
+    background: $color-gray-extreme-light;
+  }
+
+  &__figure {
+    margin: 0 auto;
+  }
+
+  &__image {
+  }
+
+  &__text {
+    margin: 5rem 0;
+    & a {
+      transition: 0.3s ease-in-out;
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 4rem;
+    font-family: $font-logo;
+    text-align: center;
+    color: $color-gray-dark;
+    margin: 4rem;
+  }
+
+  &__p {
+    text-align: center;
+    &::first-letter {
+      font-size: 5rem;
+      font-family: $font-signature;
+      color: $color-gray-extra-light;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__date {
+    font-family: $font-signature;
+    color: $color-gray-extra-light;
+  }
+  &__share p {
+    font-family: $font-signature;
+    color: $color-gray-extra-light;
+    margin-right: 1.5rem;
+  }
+
+  &__share {
+    display: flex;
+    align-items: center;
+    &-link {
+    }
+    &-icons {
+      width: 2rem;
+      height: 2rem;
+      fill: $color-gray-light;
+      margin: 0 0.5rem;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        fill: $color-primary;
+      }
+    }
+  }
+
+  ///Getting Married In Costa Rica Artilce
+
+  &__item {
+    margin: 5rem 0;
+    &:first-of-type .blog__item-image {
+      object-position: 50% 80%;
+    }
+
+    &-title {
+      font-size: 2rem;
+      color: $color-gray-medium;
+    }
+    &-content {
+      // display: flex;
+      align-items: center;
+      margin: 3rem 0 5rem;
+    }
+    &-figure {
+      // flex: 1 0 35%;
+      margin: 2rem 4rem;
+    }
+    &-image {
+      max-height: 30rem;
+      object-fit: cover;
+    }
+    &-p {
+      padding: 0 1rem;
+    }
+    &-sign {
+      padding: 0 1rem;
+      font-size: 2rem;
+      font-family: $font-signature;
+    }
+  }
+}

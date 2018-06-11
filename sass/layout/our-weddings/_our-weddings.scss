@@ -1,0 +1,135 @@
+.our-weddings {
+  &__items {
+    max-width: 130rem;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+
+    &:not(:first-child) {
+      margin-top: 5rem;
+
+      @include respond(tab-port) {
+        margin-top: 0rem;
+      }
+    }
+
+    &:nth-child(3) figure {
+      transform: translateX(-2rem);
+
+      @include respond(tab-port) {
+        transform: translateX(0);
+      }
+    }
+
+    &:nth-child(3) {
+      flex-direction: row-reverse;
+      //Second __item child
+      @include respond(tab-port) {
+        flex-direction: column-reverse;
+      }
+    }
+
+    //__item 1 and 3
+    @include respond(tab-port) {
+      flex-direction: column-reverse;
+    }
+
+    @include respond(phone) {
+      padding: 2rem 1rem;
+    }
+  }
+  &__figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex-basis: 50%;
+    transform: translateX(2rem);
+
+    @include respond(tab-port) {
+      margin-top: 0;
+      justify-content: center;
+      background: $color-white;
+      transform: translateX(0);
+
+      background-position: center;
+      background-size: cover;
+      margin: 2rem;
+      outline: 2rem solid #fbfbfb;
+      height: 50vh;
+    }
+  }
+  &__image {
+    max-height: 75%;
+    object-fit: cover;
+    box-shadow: 0 2rem 5rem rgba($color: #000000, $alpha: 0.2);
+
+    @include respond(tab-port) {
+      box-shadow: none;
+    }
+  }
+
+  &__caption {
+    margin: 3rem;
+  }
+
+  &__button {
+    margin: 5rem;
+    text-align: center;
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &__info {
+    background: $color-white;
+    box-shadow: 0 2rem 5rem rgba($color: #000000, $alpha: 0.2);
+    padding: 2rem 5rem;
+    flex-basis: 60%;
+
+    @include respond(tab-port) {
+      padding: 2rem;
+      box-shadow: none;
+    }
+
+    @include respond(phone) {
+      padding: 2rem;
+    }
+  }
+  &__title {
+    font-size: 4.5rem;
+    font-family: $font-logo;
+    color: $color-primary-dark;
+    margin-bottom: 2rem;
+    align-self: center;
+
+    display: flex;
+    align-items: flex-end;
+
+    @include respond(big-phone) {
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+    }
+
+    &-icon {
+      fill: currentColor;
+      width: 6rem;
+      height: 6rem;
+      margin-right: 5rem;
+    }
+
+    & .section-title {
+      @include respond(big-phone) {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__p {
+    margin-top: 5rem;
+    &:not(:first-of-type) {
+      margin-top: 2rem;
+    }
+  }
+}

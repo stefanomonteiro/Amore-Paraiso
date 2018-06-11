@@ -1,0 +1,36 @@
+{
+  "name": "Amore-Paraiso",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "build:aboutsass": "node-sass sass/main-about.scss css/style.about.css -w",
+    "build:homepagesass": "node-sass sass/main-homepage.scss css/style.homepage.css -w",
+    "build:ourweddingssass": "node-sass sass/main-ourweddings.scss css/style.ourweddings.css -w",
+    "build:ourservicessass": "node-sass sass/main-services.scss css/style.services.css -w",
+    "devserver": "browser-sync -w",
+    "start": "npm-run-all --parallel devserver watch:sass build:aboutsass build:homepagesass build:ourweddingssass build:ourservicessass",
+    "font": "subfont index.html -o font-optmized"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanomonteiro/Amore-Paraiso.git"
+  },
+  "author": "Stefano Monteiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stefanomonteiro/Amore-Paraiso/issues"
+  },
+  "homepage": "https://github.com/stefanomonteiro/Amore-Paraiso#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "live-server": "^1.2.0",
+    "node-sass": "^4.9.0",
+    "npm-run-all": "^4.1.2",
+    "postcss-cli": "^5.0.0",
+    "subfont": "^3.2.2",
+    "webpack": "^4.10.2",
+    "webpack-cli": "^2.1.4"
+  }
+}

@@ -1,0 +1,108 @@
+.btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  cursor: pointer;
+
+  @include respond(small-phone) {
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+  }
+  @include respond(xsmall-phone) {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+  }
+
+  &--border {
+    position: relative;
+    transition: $btnTransition;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      border-color: inherit;
+      border-style: solid;
+      height: 2rem;
+      width: 2rem;
+      transition: $btnTransition;
+    }
+    &::before {
+      top: calc(-1 * #{$dist});
+      left: calc(-1 * #{$dist});
+      border-width: 2px 0 0 2px;
+    }
+    &::after {
+      bottom: calc(-1 * #{$dist});
+      right: calc(-1 * #{$dist});
+      border-width: 0 2px 2px 0;
+    }
+
+    &:hover:before,
+    &:hover:after,
+    &:focus:before,
+    &:focus:after {
+      width: calc(100% + (#{$dist} * 2));
+      height: calc(100% + (#{$dist} * 2));
+    }
+
+    &-white {
+      color: $color-white;
+      border: $color-white 2px solid;
+
+      &:hover,
+      &:focus {
+        background: rgba($color-white, 0.8);
+        color: $color-primary;
+      }
+    }
+
+    &-pink {
+      color: $color-primary-extra-dark;
+      border: $color-primary-extra-dark 2px solid;
+
+      &:hover,
+      &:focus {
+        background: rgba($color-primary-extra-dark, 0.8);
+        color: $color-white;
+      }
+    }
+  }
+
+  &--basic {
+    &-pink {
+      background-color: $color-primary;
+      color: $color-white;
+      transition: all 0.3s ease-in-out;
+
+      @include respond(big-phone) {
+        font-size: 1.5rem;
+      }
+
+      @include respond(xsmall-phone) {
+        font-size: 1.3rem;
+      }
+      &:hover,
+      &:focus {
+        background-color: $color-primary-light;
+      }
+    }
+
+    &-black {
+      background-color: $color-black;
+      color: $color-white;
+      font-size: 1.5rem;
+      text-transform: capitalize;
+      padding: 0.75rem 2rem;
+      margin: 2rem;
+      transition: all 0.3s ease-in-out;
+
+      &:hover,
+      &:focus {
+        background-color: $color-primary;
+      }
+    }
+  }
+}

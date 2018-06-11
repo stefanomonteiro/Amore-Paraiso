@@ -1,0 +1,52 @@
+.footer {
+  color: $color-white;
+  background: $color-primary;
+  display: flex;
+  justify-content: space-around;
+
+  border-bottom: 3rem solid $color-primary;
+  border-image-source: url("../../../images/svg/logo_pink.svg");
+  border-image-slice: 130 0;
+  border-image-repeat: round;
+
+  @include respond(small-phone) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-family: $font-logo;
+    margin: 2rem 0;
+
+    @include respond(small-phone) {
+      text-align: center;
+    }
+  }
+
+  &__p {
+    color: currentColor;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: $color-primary-extra-light;
+    }
+  }
+
+  &__social {
+    &-list {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+    }
+    &-icons {
+      fill: $color-white;
+      width: 4rem;
+      height: 4rem;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        fill: $color-primary-extra-light;
+      }
+    }
+  }
+}
