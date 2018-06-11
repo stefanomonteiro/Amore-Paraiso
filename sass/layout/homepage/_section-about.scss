@@ -20,14 +20,15 @@
     }
 
     @include respond(phone) {
+      transform: rotate(0) scale(1);
       width: 20rem;
     }
   }
 
   &__image {
     @include respond(phone) {
-      transform: rotate(64deg);
-      margin: -10rem 0;
+      transform: rotate(64deg) scale(0.8);
+      margin: -14rem 0;
     }
   }
 
@@ -36,10 +37,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 5rem;
+    margin: 0 5rem;
 
     @include respond(phone) {
       max-width: 75%;
+      margin: 0;
     }
   }
 

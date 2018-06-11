@@ -184,12 +184,11 @@ hr {
     background-color: #c39e9f;
     color: #fbfbfb;
     transition: all 0.3s ease-in-out; }
-    @media only screen and (max-width: 43.75em) {
+    @media only screen and (max-width: 75em) {
       .btn--basic-pink {
-        font-size: 1.5rem; } }
-    @media only screen and (max-width: 25em) {
-      .btn--basic-pink {
-        font-size: 1.3rem; } }
+        font-size: 1.8rem;
+        width: 100%;
+        text-align: center; } }
     .btn--basic-pink:hover, .btn--basic-pink:focus {
       background-color: #d6bebe; }
   .btn--basic-black {
@@ -626,22 +625,30 @@ hr {
     transform: rotate(-135deg); }
   .navbar-mobile__menu {
     position: absolute;
-    background: rgba(195, 158, 159, 0.97);
-    box-shadow: 0 1px 10px 1px rgba(195, 158, 159, 0.3);
     z-index: 100;
-    padding: 2rem 1rem 2rem 10%;
     top: 8.7rem;
     right: -3rem;
-    width: 30rem;
-    border-bottom-left-radius: 50%;
-    transform: scale(0);
-    transform-origin: right top;
-    transition: all 1s ease-in-out 0.5s; }
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: all 1s ease-in-out 0.5s;
+    background-color: rgba(0, 0, 0, 0.8); }
+    @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+      .navbar-mobile__menu {
+        -webkit-backdrop-filter: blur(2rem);
+        backdrop-filter: blur(2rem);
+        background-color: rgba(0, 0, 0, 0.7); } }
     .navbar-mobile__menu-list {
-      list-style: none; }
+      list-style: none;
+      background: rgba(195, 158, 159, 0.97);
+      box-shadow: 0 1px 10px 1px rgba(195, 158, 159, 0.3);
+      border-bottom-left-radius: 50%;
+      transform: scale(0);
+      transform-origin: right top;
+      transition: all 1s ease-in-out 0.5s; }
     .navbar-mobile__menu-items {
       text-align: center;
-      margin: 0.5rem;
+      padding: 1rem;
       opacity: 0;
       transform: translateX(-3rem);
       transition: all 0.7s ease-in-out; }
@@ -656,8 +663,11 @@ hr {
       .navbar-mobile__menu-link:hover, .navbar-mobile__menu-link:focus {
         color: #eadddd; }
   .navbar-mobile__checkbox:checked ~ .navbar-mobile__menu {
+    transition: all 1s ease-in-out;
+    opacity: 1; }
+  .navbar-mobile__checkbox:checked ~ .navbar-mobile__menu > .navbar-mobile__menu-list {
     transform: scale(1);
-    transition: all 1s ease-in-out; }
+    border-bottom-left-radius: 0; }
   .navbar-mobile__checkbox:checked ~ .navbar-mobile__menu > .navbar-mobile__menu-list > * {
     opacity: 1;
     transform: translateX(0);
@@ -721,6 +731,7 @@ hr {
 
 .header {
   height: 95vh;
+  min-height: 70rem;
   position: relative; }
   .header__figure {
     position: absolute;
@@ -728,6 +739,7 @@ hr {
     left: 0; }
   .header__image {
     height: 90vh;
+    min-height: 70rem;
     width: 100vw;
     object-fit: cover;
     object-position: 50% 85%; }
@@ -774,20 +786,22 @@ hr {
         margin-left: 0; } }
     @media only screen and (max-width: 37.5em) {
       .section-about__flower {
+        transform: rotate(0) scale(1);
         width: 20rem; } }
   @media only screen and (max-width: 37.5em) {
     .section-about__image {
-      transform: rotate(64deg);
-      margin: -10rem 0; } }
+      transform: rotate(64deg) scale(0.8);
+      margin: -14rem 0; } }
   .section-about__text-box {
     max-width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 5rem; }
+    margin: 0 5rem; }
     @media only screen and (max-width: 37.5em) {
       .section-about__text-box {
-        max-width: 75%; } }
+        max-width: 75%;
+        margin: 0; } }
   .section-about__paragraph {
     margin: 2rem 0; }
     .section-about__paragraph:last-of-type {
@@ -869,6 +883,18 @@ hr {
         background: rgba(195, 158, 159, 0.2);
         z-index: 5;
         transition: opacity 0.3s ease-in-out; }
+      .section-services__images-overlay--touch {
+        height: 100%; }
+        .section-services__images-overlay--touch::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background: rgba(155, 96, 98, 0.7);
+          z-index: 5;
+          transition: opacity 0.3s ease-in-out; }
   .section-services__captions {
     position: absolute;
     bottom: 10%;
@@ -877,6 +903,12 @@ hr {
     z-index: 10;
     transform: translateY(10rem);
     transition: transform 1s ease-in-out; }
+    @media only screen and (max-width: 37.5em) {
+      .section-services__captions {
+        transform: translateY(0rem);
+        padding: 0 1.5rem; } }
+    .section-services__captions--touch {
+      transform: translateY(0rem); }
   .section-services__captions-title {
     font-size: 3rem;
     font-family: "Amatic SC", cursive;
@@ -893,6 +925,8 @@ hr {
     @media only screen and (max-width: 31.25em) {
       .section-services__captions-paragraph {
         display: none; } }
+    .section-services__captions-paragraph--touch {
+      opacity: 1; }
   .section-services__button {
     margin: 5rem auto;
     display: flex;
@@ -929,6 +963,10 @@ hr {
         .section-testimonials__quote::before {
           top: 4rem;
           left: -3.5rem; } }
+      @media only screen and (max-width: 25em) {
+        .section-testimonials__quote::before {
+          top: 4rem;
+          left: 0.5rem; } }
     .section-testimonials__quote::after {
       content: "\201D";
       right: -3.5rem;
@@ -937,6 +975,10 @@ hr {
         .section-testimonials__quote::after {
           right: -2.5rem;
           bottom: -5.5rem; } }
+      @media only screen and (max-width: 25em) {
+        .section-testimonials__quote::after {
+          right: 0.5rem;
+          bottom: -5.5rem; } }
   .section-testimonials__couple {
     font-size: 3rem;
     font-family: "Satisfy", cursive;
@@ -944,7 +986,8 @@ hr {
     margin-top: 2rem; }
 
 .section-blog__articles .blog__article {
-  display: flex; }
+  display: flex;
+  align-items: center; }
   .section-blog__articles .blog__article > .blog__figure {
     flex: 1 0 40%; }
   .section-blog__articles .blog__article > .blog__text {

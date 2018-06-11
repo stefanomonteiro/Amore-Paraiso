@@ -1,0 +1,31 @@
+.section-blog {
+  &__articles {
+    & .blog__article {
+      display: flex;
+      align-items: center;
+
+      // @include respond(big-phone) {
+      //   flex-direction: column;
+      // }
+
+      & > .blog__figure {
+        flex: 1 0 40%;
+      }
+
+      & > .blog__text {
+        margin: 0 2rem;
+      }
+
+      & > .blog__footer {
+        display: none;
+      }
+
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+        // @include respond(big-phone) {
+        //   flex-direction: column;
+        // }
+      }
+    }
+  }
+}

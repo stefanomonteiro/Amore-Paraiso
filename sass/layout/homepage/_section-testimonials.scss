@@ -39,6 +39,10 @@
         top: 4rem;
         left: -3.5rem;
       }
+      @include respond(xsmall-phone) {
+        top: 4rem;
+        left: 0.5rem;
+      }
     }
     &::after {
       content: "\201D";
@@ -47,6 +51,10 @@
 
       @include respond(phone) {
         right: -2.5rem;
+        bottom: -5.5rem;
+      }
+      @include respond(xsmall-phone) {
+        right: 0.5rem;
         bottom: -5.5rem;
       }
     }

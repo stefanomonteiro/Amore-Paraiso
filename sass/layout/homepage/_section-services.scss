@@ -106,6 +106,21 @@
         z-index: 5;
         transition: opacity 0.3s ease-in-out;
       }
+
+      &--touch {
+        height: 100%;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background: rgba($color: $color-primary-extra-dark, $alpha: 0.7);
+          z-index: 5;
+          transition: opacity 0.3s ease-in-out;
+        }
+      }
     }
   }
 
@@ -117,6 +132,15 @@
     z-index: 10;
     transform: translateY(10rem);
     transition: transform 1s ease-in-out;
+
+    @include respond(phone) {
+      transform: translateY(0rem);
+      padding: 0 1.5rem;
+    }
+
+    &--touch {
+      transform: translateY(0rem);
+    }
   }
 
   &__captions-title {
@@ -138,6 +162,10 @@
 
     @include respond(small-phone) {
       display: none;
+    }
+
+    &--touch {
+      opacity: 1;
     }
   }
 
