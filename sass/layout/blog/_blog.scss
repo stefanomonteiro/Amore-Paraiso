@@ -9,6 +9,7 @@
 
   &__figure {
     margin: 0 auto;
+    overflow: hidden;
   }
 
   &__image {
@@ -94,6 +95,7 @@
     &-figure {
       // flex: 1 0 35%;
       margin: 2rem 4rem;
+      overflow: hidden;
     }
     &-image {
       max-height: 30rem;

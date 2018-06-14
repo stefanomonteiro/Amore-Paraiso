@@ -576,7 +576,8 @@ hr {
 .header {
   height: 95vh;
   min-height: 70rem;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .header__figure {
     position: absolute;
     top: 0;

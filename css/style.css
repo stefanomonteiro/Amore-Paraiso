@@ -732,7 +732,8 @@ hr {
 .header {
   height: 95vh;
   min-height: 70rem;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .header__figure {
     position: absolute;
     top: 0;
@@ -1004,7 +1005,8 @@ hr {
   background: rgba(0, 0, 0, 0.05); }
 
 .blog__figure {
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow: hidden; }
 
 .blog__text {
   margin: 5rem 0; }
@@ -1063,7 +1065,8 @@ hr {
     align-items: center;
     margin: 3rem 0 5rem; }
   .blog__item-figure {
-    margin: 2rem 4rem; }
+    margin: 2rem 4rem;
+    overflow: hidden; }
   .blog__item-image {
     max-height: 30rem;
     object-fit: cover; }

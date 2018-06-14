@@ -590,6 +590,7 @@ hr {
 .our-weddings__image {
   max-height: 75%;
   object-fit: cover;
+  overflow: hidden;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2); }
   @media only screen and (max-width: 56.25em) {
     .our-weddings__image {
