@@ -43,7 +43,7 @@ html {
 
 body {
   box-sizing: border-box;
-  background: #fbfbfb;
+  background: #fff;
   font-family: "Roboto", sans-serif; }
 
 img {
@@ -109,7 +109,7 @@ hr {
       font-size: 6rem; } }
   .section-title--bottom {
     font-family: "Satisfy", cursive;
-    font-size: 3rem; }
+    font-size: 3.5rem; }
     @media only screen and (max-width: 37.5em) {
       .section-title--bottom {
         font-size: 2.5rem; } }
@@ -649,6 +649,13 @@ hr {
         margin: 0; } }
   .section-about__paragraph {
     margin: 2rem 0; }
+    .section-about__paragraph:first-of-type::first-letter {
+      font-size: 5rem;
+      font-family: "Satisfy", cursive;
+      color: rgba(0, 0, 0, 0.3); }
+    .section-about__paragraph--caps {
+      text-transform: uppercase;
+      font-size: 1.5rem; }
     .section-about__paragraph:last-of-type {
       margin-bottom: 5rem; }
 

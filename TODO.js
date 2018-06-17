@@ -1,17 +1,14 @@
 //*          TO DO                  .
-//*     -Change BackGround Images;
 //*     -Webpack;
-//*     -Restructure Sass;
 //*     -Research content load only;
-//*     -Purge CSS;
-//*     -Load Navbar Mobile only when is mobile;
-//*     -Adjust GIT;
+//*     -Page Transition;
+//*     -Loader;
 
 //?         LAYOUT                  .
 //?     -Sticky Nav (decrease and show on scroll up only)
 //?                           .
 
-//!         Smalle Deats                .
+//!         Smaller Deats                .
 //!     - Social Media
 //!     - Add Pinterest
 //!

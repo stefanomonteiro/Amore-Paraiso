@@ -9,12 +9,13 @@
 @import "base/utilities";
 
 @import "components/button";
+@import "components/form";
 @import "components/slider";
+@import "components/instagram";
 
 @import "layout/about/about-page";
 
 @import "layout/pages-template/container-logo";
-@import "components/instagram";
 @import "layout/pages-template/sidebar-template";
 
 @import "layout/general/navbar";
@@ -28,3 +29,5 @@
 @import "layout/homepage/section-blog";
 
 @import "layout/blog/blog";
+
+@import "layout/contact/contact";

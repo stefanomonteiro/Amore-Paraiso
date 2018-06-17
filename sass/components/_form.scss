@@ -1,0 +1,75 @@
+.form {
+  height: 0;
+  margin: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__group {
+    position: relative;
+    margin: 2rem;
+    flex: 1 1 40%;
+
+    &:last-child {
+      flex: 1 1 100%;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    // text-align: center;
+    width: 90%;
+    font-size: 1.5rem;
+    padding: 2rem 1rem;
+    border: none;
+    background: $color-primary-ultra-light;
+    color: $color-primary-extra-dark;
+    transition: 0.3s ease-in-out;
+
+    &::placeholder {
+      color: $color-primary-light;
+      transition: color 0.3s ease-in-out;
+    }
+
+    &:hover {
+      background: $color-primary-extra-light;
+    }
+    &:hover::placeholder {
+      color: $color-primary;
+    }
+    &:focus::placeholder {
+      opacity: 0;
+    }
+
+    &:focus:invalid {
+      box-shadow: inset 0 0.2rem 0 0 $color-red;
+    }
+    &:focus:valid {
+      box-shadow: inset 0 0.2rem 0 0 $color-terciary;
+    }
+  }
+
+  &__textarea {
+    resize: none;
+    width: 95%;
+  }
+
+  &__label {
+    color: $color-primary-light;
+    font-size: 1.3rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(1rem, 1rem);
+    transition: 0.3s ease-in-out;
+  }
+
+  &__input:focus + .form__label,
+  &__textarea:focus + .form__label,
+  &__input:not(:placeholder-shown) + &__label {
+    opacity: 1;
+    visibility: unset;
+    transform: translate(1rem, -1.7rem);
+  }
+}

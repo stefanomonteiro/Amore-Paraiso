@@ -1,6 +1,6 @@
 .about {
   &__header {
-    margin: 5rem 0rem;
+    margin: 0 0 5rem;
     padding-bottom: 0;
 
     @include respond(tab-port) {
